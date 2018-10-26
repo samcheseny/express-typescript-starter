@@ -1,0 +1,34 @@
+{
+  "name": "server-typescript",
+  "version": "1.0.0",
+  "description": "Server for the log monitor written in Typescript",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "mocha 'dist/test/**/*.spec.js'",
+    "build-ts": "tsc",
+    "start": "npm run serve",
+    "serve": "node dist/server.js",
+    "watch-node": "nodemon dist/server.js",
+    "watch-ts": "tsc -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^10.12.0",
+    "body-parser": "^1.18.3",
+    "debug": "^4.1.0",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "http-errors": "^1.7.1",
+    "morgan": "^1.9.1",
+    "pg": "^7.5.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.41.0",
+    "socket.io": "^2.1.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.16.0",
+    "nodemon": "^1.18.4",
+    "typescript": "^3.1.3"
+  }
+}
