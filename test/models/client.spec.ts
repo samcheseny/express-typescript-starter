@@ -1,4 +1,4 @@
-import {Client} from  '../../models';
+import {Client} from '../../src/models/index';
 
 describe('Testing ClientModel', () => {
 

@@ -1,10 +1,13 @@
-import server from '../../App';
+import server from '../../src/App';
 import * as chai from 'chai';
 import chaiHttp =require("chai-http");
 
 chai.should();
 chai.config.includeStack = true;
 chai.use(chaiHttp);
+
+const assert = chai.assert;
+const expect = chai.expect;
 
 describe('Testing Auth Routes', () => {
 

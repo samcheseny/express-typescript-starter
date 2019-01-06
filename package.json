@@ -2,33 +2,71 @@
   "name": "server-typescript",
   "version": "1.0.0",
   "description": "Server for the log monitor written in Typescript",
-  "main": "dist/index.js",
+  "main": "dist/server.js",
   "scripts": {
-    "test": "mocha 'dist/test/**/*.spec.js'",
+    "test": "mocha -r ts-node/register ./test/**/*.spec.ts",
+    "test:coverage": "nyc --reporter=text mocha -r ts-node/register ./test/**/*.spec.ts",
     "build-ts": "tsc",
     "start": "npm run serve",
     "serve": "node dist/server.js",
     "watch-node": "nodemon dist/server.js",
     "watch-ts": "tsc -w"
   },
+  "nyc": {
+    "extension": [
+      ".ts",
+      ".tsx"
+    ],
+    "exclude": [
+      "**/*.d.ts"
+    ],
+    "reporter": [
+      "html"
+    ],
+    "all": true
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/node": "^10.12.0",
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "debug": "^4.1.0",
     "dotenv": "^6.1.0",
     "express": "^4.16.4",
     "http-errors": "^1.7.1",
     "morgan": "^1.9.1",
+    "oauth2orize": "^1.11.0",
+    "passport": "^0.4.0",
+    "passport-http-bearer": "^1.0.1",
+    "passport-oauth2-client-password": "^0.1.2",
     "pg": "^7.5.0",
-    "pg-hstore": "^2.3.2",
-    "sequelize": "^4.41.0",
-    "socket.io": "^2.1.1"
+    "socket.io": "^2.1.1",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/chai": "^4.1.7",
+    "@types/chai-as-promised": "^7.1.0",
+    "@types/chai-http": "^3.0.5",
+    "@types/debug": "0.0.31",
+    "@types/dotenv": "^6.1.0",
     "@types/express": "^4.16.0",
-    "nodemon": "^1.18.4",
+    "@types/http-errors": "^1.6.1",
+    "@types/mocha": "^5.2.5",
+    "@types/morgan": "^1.7.35",
+    "@types/node": "^10.12.0",
+    "@types/oauth2orize": "^1.8.5",
+    "@types/passport-http-bearer": "^1.0.33",
+    "@types/pg": "^7.4.11",
+    "@types/socket.io": "^2.1.2",
+    "@types/uuid": "^3.4.4",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "chai-http": "^4.2.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.7",
+    "nyc": "^13.1.0",
+    "ts-node": "^7.0.1",
     "typescript": "^3.1.3"
   }
 }

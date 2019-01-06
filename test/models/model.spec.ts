@@ -1,4 +1,4 @@
-import Model from  '../../models/Model';
+import Model from '../../src/models/Model';
 
 describe('Testing Model', () => {
 

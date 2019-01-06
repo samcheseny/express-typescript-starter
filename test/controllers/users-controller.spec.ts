@@ -1,4 +1,4 @@
-import UsersController from  '../../controllers/UsersController';
+import UsersController from '../../src/controllers/UsersController';
 
 describe('Testing UsersController', () => {
 

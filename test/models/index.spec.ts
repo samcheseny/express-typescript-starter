@@ -1,4 +1,4 @@
-import * as models from '../../models/index';
+import * as models from '../../src/models/index';
 
 describe('Testing Model Entry ', () => {
 

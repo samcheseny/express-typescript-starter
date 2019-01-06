@@ -1,4 +1,4 @@
-import {AccessToken} from  '../../models';
+import {AccessToken} from '../../src/models/index';
 
 describe('Testing AccessTokenModel', () => {
 
